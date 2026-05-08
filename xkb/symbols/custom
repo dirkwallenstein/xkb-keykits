@@ -1,0 +1,34 @@
+partial alphanumeric_keys
+xkb_symbols "keykits" {
+    // Modify the basic German layout to not have any dead keys.
+
+    include "de(nodeadkeys)"
+    name[Group1]="German (keykits)";
+
+
+    // This is the key left of backspace. Put hash (numbersign) on level 1
+    key <AE12>  { [   numbersign,      NoSymbol,           NoSymbol,            NoSymbol ]  }; // dead_acute
+
+    // Who needs laws?
+    key <AE03>  { [     NoSymbol,    apostrophe,           NoSymbol,            NoSymbol ]  }; // 3
+
+    // equip level 3 and 4 at the right hand home row with cursor functions.
+    key <AD07>  { [     NoSymbol,      NoSymbol,               Home,                Home ]  }; // u
+    key <AD08>  { [     NoSymbol,      NoSymbol,                 Up,                  Up ]  }; // i
+    key <AD09>  { [     NoSymbol,      NoSymbol,                End,                 End ]  }; // o
+    key <AD11>  { [     NoSymbol,      NoSymbol,                bar,           brokenbar ]  }; // ü
+    key <AC06>  { [     NoSymbol,      NoSymbol,          BackSpace,           BackSpace ]  }; // h
+    key <AC07>  { [     NoSymbol,      NoSymbol,               Left,                Left ]  }; // j
+    key <AC08>  { [     NoSymbol,      NoSymbol,               Down,                Down ]  }; // k
+    key <AC09>  { [     NoSymbol,      NoSymbol,              Right,               Right ]  }; // l
+    key <AC10>  { [     NoSymbol,      NoSymbol,           EuroSign,         doubleacute ]  }; // ö
+    key <AC11>  { [     NoSymbol,      NoSymbol,                 at,         asciicircum ]  }; // ä
+    key <AB06>  { [     NoSymbol,      NoSymbol,             Delete,              Delete ]  }; // n
+    key <AB07>  { [     NoSymbol,      NoSymbol,             Insert,                  mu ]  }; // m
+
+    // New alt modifier config
+    key <DALT>  { [  Alt_R      ]};
+
+    // arbitrary test config
+    key <TSTR>  { [            r,             R,        Greek_omega,         Greek_OMEGA ]  };
+};

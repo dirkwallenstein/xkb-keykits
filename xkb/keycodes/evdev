@@ -1,0 +1,22 @@
+default xkb_keycodes "rotations" {
+    include "evdev(evdev)"
+    minimum = 8;
+    maximum = 255;
+
+    // German hash and return keys
+    <RTRN> = 51;  // <BKSL>
+    <DALT> = 36;  // <RTRN>
+
+    // rotate on the left counterclockwise
+    <LALT> = 66;  // <CAPS>
+    <CAPS> = 37;  // <LCTL>
+    <LCTL> = 64;  // <LALT>
+
+    // rotate on the bottom (use LVL3 instead of RALT)
+    <LVL3> = 133; // <LWIN>
+    <RCTL> = 108; // <RALT>
+    <LWIN> = 105; // <RCTL>
+
+    // test assignments for debugging
+    <TSTR> = 555;
+};
