@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+<xkbConfigRegistry version="1.1">
+
+  <modelList>
+    <model>
+      <configItem>
+        <name>bareminimum</name>
+        <description>Bareminimum of Username</description>
+        <vendor>Username</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>logitech</name>
+        <description>Logitech of Username</description>
+        <vendor>Username</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>cherry</name>
+        <description>Cherry of Username</description>
+        <vendor>Username</vendor>
+      </configItem>
+    </model>
+  </modelList>
+
+  <layoutList>
+    <layout>
+      <configItem>
+        <name>username</name>
+        <shortDescription>User layout</shortDescription>
+        <description>Language layout of the user</description>
+      </configItem>
+
+      <variantList>
+        <variant>
+          <configItem>
+            <name>usersymbols</name>
+            <shortDescription>usersymbols</shortDescription>
+            <description>Username (usersymbols)</description>
+          </configItem>
+        </variant>
+      </variantList>
+
+    </layout>
+  </layoutList>
+
+  <optionList>
+    <group allowMultipleSelection="true">
+      <configItem>
+        <name>userkeyboard</name>
+        <description>User Keyboards</description>
+      </configItem>
+      <option>
+        <configItem>
+          <name>mykeyboards</name>
+          <description>Select custom keycode assignments</description>
+        </configItem>
+      </option>
+    </group>
+  </optionList>
+
+</xkbConfigRegistry>

@@ -1,0 +1,7 @@
+default xkb_keycodes "custombase" {
+    include "custom/base(base)"
+
+    // Symbols
+    <TSTR> = 27; // <AD04>
+
+};

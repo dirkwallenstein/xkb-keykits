@@ -1,0 +1,14 @@
+default xkb_keycodes "base" {
+    include "evdev(evdev)"
+
+    // Modifiers
+    <MYL3> = 133; // <LWIN>
+    <MALT> = 37;  // <LCTL>
+    <MSUP> = 105; // <RCTL>
+    <MCTL> = 64;  // <LALT>
+
+    // Symbols
+    <TSTN> = 57; // <AB06>
+    <TSTM> = 58; // <AB07>
+
+};
