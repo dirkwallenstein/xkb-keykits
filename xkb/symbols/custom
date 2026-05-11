@@ -1,10 +1,9 @@
 partial alphanumeric_keys
 xkb_symbols "keykits" {
-    // Modify the basic German layout to not have any dead keys.
 
     include "de(nodeadkeys)"
-    name[Group1]="German (keykits)";
 
+    name[Group1]="German (keykits)";
 
     // This is the key left of backspace. Put hash (numbersign) on level 1
     key <AE12>  { [   numbersign,      NoSymbol,           NoSymbol,            NoSymbol ]  }; // dead_acute

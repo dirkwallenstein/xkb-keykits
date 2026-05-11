@@ -1,6 +1,5 @@
 partial alphanumeric_keys
 xkb_symbols "usersymbols" {
-    // Modify the basic German layout to not have any dead keys.
 
     include "de(nodeadkeys)"
 
