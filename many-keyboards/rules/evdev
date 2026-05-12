@@ -11,17 +11,11 @@
 ! model   option       = keycodes
   *       mykeyboards  = custom/%m
 
-// ensure the toolkit is available for the own models. This does not prevent
-// inet(evdev) being tacked on
-! model               =   symbols
-  bareminimum         =   username(usersymbols)
-  $mykeyboards        =   username(usersymbols)
-
 // Include the system 'evdev' file
 ! include %S/evdev
 
 // This ensures the symbols for the models are appended and override all symbols
 // added in the system rules file but other layout rules match beforehand.
-//! model               =   symbols
-//  bareminimum         =   +username(usersymbols)
-//  $mykeyboards        =   +username(usersymbols)
+! model               =   symbols
+  bareminimum         =   +username(usersymbols)
+  $mykeyboards        =   +username(usersymbols)
