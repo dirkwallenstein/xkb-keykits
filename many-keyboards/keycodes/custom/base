@@ -1,14 +1,18 @@
 default xkb_keycodes "base" {
     include "evdev(evdev)"
 
-    // Modifiers
-    <MYL3> = 133; // <LWIN>
-    <MALT> = 37;  // <LCTL>
-    <MSUP> = 105; // <RCTL>
-    <MCTL> = 64;  // <LALT>
+    // German hash and return keys
+    <RTRN> = 51;  // <BKSL>
+    <DALT> = 36;  // <RTRN>
 
-    // Symbols
-    <TSTN> = 57; // <AB06>
-    <TSTM> = 58; // <AB07>
+    // rotate on the left counterclockwise
+    <MESC> = 66;  // <CAPS>
+    <CAPS> = 37;  // <LCTL>
+    <LCTL> = 64;  // <LALT>
+
+    // rotate on the bottom (use LVL3 instead of RALT)
+    <MYL3> = 133; // <LWIN>
+    <MCTL> = 108; // <RALT>
+    <MSUP> = 105; // <RCTL>
 
 };

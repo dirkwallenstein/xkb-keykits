@@ -1,11 +1,5 @@
 partial alphanumeric_keys
-xkb_symbols "usersymbols" {
-
-//  include "pc"
-//  include "de(nodeadkeys)"
-//  include "inet(evdev)"
-
-    name[Group1]="Folk Unit One (usersymbols)";
+xkb_symbols "own" {
 
     key <DALT> { [  Alt_R             ] };
 
@@ -15,10 +9,38 @@ xkb_symbols "usersymbols" {
     key <MCTL> { [  Control_L         ] };
 
     // Example configs
+    key <MESC> { [    Escape ] };
     key <TEST> { [    Insert ] };
     key <TSTN> { [         n,       N,              at,         Delete ] };
     key <TSTM> { [         m,       M,        EuroSign,             mu ] };
     key <TSTR> { [         r,       R,     Greek_omega,    Greek_OMEGA ] };
     key <TSTT> { [         t,       T,             eth,            ETH ] };
+
+};
+
+partial alphanumeric_keys
+xkb_symbols "extend" {
+
+    include "de(nodeadkeys)"
+
+    // This is the key left of backspace. Put hash (numbersign) on level 1
+    key <AE12>  { [   numbersign,      NoSymbol,           NoSymbol,            NoSymbol ]  }; // dead_acute
+
+    // Who needs laws?
+    key <AE03>  { [     NoSymbol,    apostrophe,           NoSymbol,            NoSymbol ]  }; // 3
+
+    // equip level 3 and 4 at the right hand home row with cursor functions.
+    key <AD07>  { [     NoSymbol,      NoSymbol,               Home,                Home ]  }; // u
+    key <AD08>  { [     NoSymbol,      NoSymbol,                 Up,                  Up ]  }; // i
+    key <AD09>  { [     NoSymbol,      NoSymbol,                End,                 End ]  }; // o
+    key <AD11>  { [     NoSymbol,      NoSymbol,                bar,           brokenbar ]  }; // ü
+    key <AC06>  { [     NoSymbol,      NoSymbol,          BackSpace,           BackSpace ]  }; // h
+    key <AC07>  { [     NoSymbol,      NoSymbol,               Left,                Left ]  }; // j
+    key <AC08>  { [     NoSymbol,      NoSymbol,               Down,                Down ]  }; // k
+    key <AC09>  { [     NoSymbol,      NoSymbol,              Right,               Right ]  }; // l
+    key <AC10>  { [     NoSymbol,      NoSymbol,           EuroSign,         doubleacute ]  }; // ö
+    key <AC11>  { [     NoSymbol,      NoSymbol,                 at,         asciicircum ]  }; // ä
+    key <AB06>  { [     NoSymbol,      NoSymbol,             Delete,              Delete ]  }; // n
+    key <AB07>  { [     NoSymbol,      NoSymbol,             Insert,                  mu ]  }; // m
 
 };

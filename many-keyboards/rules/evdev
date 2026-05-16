@@ -1,15 +1,15 @@
 // Own custom models
 ! $mykeyboards = logitech cherry
+! $mykeys      = logitech cherry bareminimum
 
 ! model               =   keycodes
   bareminimum         =   custom/base
   $mykeyboards        =   custom/%m
 
-// Without the need to register keyboards in this file, but feels more brittle.
-// Just append to the $mykeyboards list above when you are editing keycodes
-// files.
-! model   option       = keycodes
-  *       mykeyboards  = custom/%m
+// Set the default layout for mykeys but also prevent selection of any other
+// layout. Didn't get the <some> or <none> wildcards to work.
+! model          layout        =   symbols
+  $mykeys        *             =   pc+username(extend)
 
 // Include the system 'evdev' file
 ! include %S/evdev
@@ -17,5 +17,4 @@
 // This ensures the symbols for the models are appended and override all symbols
 // added in the system rules file but other layout rules match beforehand.
 ! model               =   symbols
-  bareminimum         =   +username(usersymbols)
-  $mykeyboards        =   +username(usersymbols)
+  $mykeys             =   ^username(own)
