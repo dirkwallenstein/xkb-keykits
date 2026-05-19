@@ -6,7 +6,7 @@ xkb_symbols "own" {
     key <MYL3> { [  ISO_Level3_Shift  ] };
     key <MALT> { [  Alt_L             ] };
     key <MSUP> { [  Super_L           ] };
-    key <MCTL> { [  Control_L         ] };
+    key <MCTL> { [  Control_R         ] };
 
     // Example configs
     key <MESC> { [    Escape ] };
